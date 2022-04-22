@@ -1,0 +1,15 @@
+{
+  "name": "pfps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/UsboKirishima/pfps",
+  "author": "UsboKirishima <usbertibox@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@pfps/app": "file:./packages/app"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
