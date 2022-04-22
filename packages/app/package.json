@@ -11,6 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
+    "@types/ioredis": "^4.28.10",
+    "ioredis": "^5.0.4",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0"
