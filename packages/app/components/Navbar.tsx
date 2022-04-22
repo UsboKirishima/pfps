@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { BellIcon, MenuIcon, SortAscendingIcon, XIcon } from '@heroicons/react/outline'
+import { signIn, signOut, useSession } from 'next-auth/react';
+
 
 export interface user {
     name: string;
@@ -27,7 +29,7 @@ export const user: user = {
 }
 
 export const navigation: navigation[] = [
-    { name: 'Home', href: '#', current: false },
+    { name: 'Home', href: '#', current: true },
     { name: 'Pfps', href: '#', current: false },
     { name: 'Banners', href: '#', current: false },
     { name: 'Emojis', href: '#', current: false },
@@ -43,6 +45,9 @@ export const classNames: any = (...classes: any[]) => {
 }
 
 export const Navbar = () => {
+
+    const { data: session } = useSession()
+
     return (
         <>
             <div className="min-h-full">
@@ -81,7 +86,15 @@ export const Navbar = () => {
                                     </div>
                                     <div className="hidden md:block">
                                         <div className="ml-4 flex items-center md:ml-6">
-                                            
+                                            <button
+                                                type="button"
+                                                className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                                onClick={() => { signIn() }}
+                                            >
+                                                <span className="sr-only">View notifications</span>
+                                                <BellIcon className="h-6 w-6" aria-hidden="true" />
+                                            </button>
+
                                             {/* Profile dropdown */}
                                             <Menu as="div" className="ml-3 relative">
                                                 <div>

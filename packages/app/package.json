@@ -14,6 +14,7 @@
     "@types/ioredis": "^4.28.10",
     "ioredis": "^5.0.4",
     "next": "12.1.5",
+    "next-auth": "^4.3.3",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
