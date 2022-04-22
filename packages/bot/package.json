@@ -1,1 +1,8 @@
-{"name":"@pfps/bot","main":"src/index.js","version":"1.0.0"}
+{
+    "name": "@pfps/bot",
+    "main": "dist/index.js",
+    "version": "1.0.0",
+    "dependencies": {
+        "discord.js": "^13.6.0"
+    }
+}
